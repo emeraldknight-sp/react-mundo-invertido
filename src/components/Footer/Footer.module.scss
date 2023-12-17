@@ -1,0 +1,88 @@
+@import "../../style/variables";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  position: relative;
+  overflow: hidden;
+
+  background-color: $gray;
+  padding: 3.75rem 0;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-family: $tipography-content;
+      font-size: $text-md;
+      line-height: $lineheight-md;
+      color: $black;
+      font-weight: 400;
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        font-weight: bolder;
+        color: inherit;
+      }
+    }
+  }
+
+  img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+  }
+}
+
+.footer::before,
+.footer::after {
+  content: "";
+  min-width: 250px;
+  height: 150px;
+  background: url("../../assets/images/tape.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -30px;
+  z-index: 9999;
+}
+
+.footer::before {
+  transform: rotateZ(-10deg);
+  left: -170px;
+}
+
+.footer::after {
+  transform: rotateZ(10deg);
+  right: -200px;
+}
+
+@media (min-width: 768px) {
+  .footer::before {
+    transform: rotateZ(-10deg);
+    left: -100px;
+  }
+
+  .footer::after {
+    transform: rotateZ(10deg);
+    right: -130px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer::before {
+    transform: rotateZ(-10deg);
+    left: -30px;
+  }
+
+  .footer::after {
+    transform: rotateZ(10deg);
+    right: -50px;
+  }
+}
