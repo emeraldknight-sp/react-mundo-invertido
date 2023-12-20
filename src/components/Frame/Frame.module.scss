@@ -1,0 +1,26 @@
+.container {
+  background: var(--red);
+  max-width: 800px;
+  max-height: 250px;
+  width: 95%;
+
+  @media (min-width: 425px) {
+    width: auto;
+  }
+}
+
+.frame {
+  position: relative;
+  bottom: 14px;
+  left: 14px;
+  height: 100%;
+  width: 100%;
+  border: 2px solid;
+  border-image: linear-gradient(var(--red), var(--white));
+  border-image-slice: 10;
+
+  @media (min-width: 768px) {
+    bottom: 24px;
+    left: 24px;
+  }
+}
