@@ -1,0 +1,84 @@
+.container {
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: var(--red);
+  padding: 1rem;
+}
+
+.form button {
+  background: var(--black);
+  border: 2px solid var(--black);
+  color: var(--white);
+  padding: 1rem 2rem;
+  font-family: var(--tipography-title);
+  font-weight: 900;
+  font-size: var(--text-lg);
+  line-height: var(--lineheight-lg);
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 300px;
+}
+
+.form button:hover {
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--white);
+  transform: scale(1.01);
+}
+
+.form button:active {
+  transform: scale(0.99);
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.form label {
+  font-family: var(--tipography-content);
+  font-size: var(--text-md);
+  font-weight: 400;
+  line-height: var(--lineheight-md);
+  color: var(--white);
+}
+
+.form input,
+.form textarea {
+  background: var(--black);
+  border: 2px solid var(--white);
+  color: var(--white);
+  padding: 0.5rem;
+}
+
+.form input:focus-visible,
+.form textarea:focus-visible {
+  outline: none;
+  border-color: var(--black);
+}
+
+.container::after {
+  content: "";
+  background-color: var(--highlight-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: -1;
+
+  @media (min-width: 768px) {
+    top: 24px;
+    left: 24px;
+  }
+}
