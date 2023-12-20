@@ -1,5 +1,3 @@
-@import "../../style/variables";
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -10,35 +8,30 @@
   position: relative;
   overflow: hidden;
 
-  background-color: $gray;
+  background-color: var(--footer-background-color);
   padding: 3.75rem 0;
+}
 
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    p {
-      font-family: $tipography-content;
-      font-size: $text-md;
-      line-height: $lineheight-md;
-      color: $black;
-      font-weight: 400;
-      text-align: center;
+.footer div p {
+  text-align: center;
+}
 
-      a {
-        text-decoration: none;
-        font-weight: bolder;
-        color: inherit;
-      }
-    }
-  }
+.footer div p a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: inherit;
+}
 
-  img {
-    width: 150px;
-    height: auto;
-    cursor: pointer;
-  }
+.footer img {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
 }
 
 .footer::before,

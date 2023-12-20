@@ -1,10 +1,11 @@
 import LogoDio from "../../assets/images/logo-dio.webp";
+import { Container } from "../Container";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
+      <Container>
         <p>
           Projeto construído para fins didáticos com o objetivo de colocar em
           prática os conhecimentos de HTML5, CSS3 e Javascript ES6 aprendidos na
@@ -37,7 +38,7 @@ export const Footer = () => {
           </a>
           .
         </p>
-      </div>
+      </Container>
       <img src={LogoDio} alt="Logotipo dio" />
     </footer>
   );
