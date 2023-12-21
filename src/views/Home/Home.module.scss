@@ -1,0 +1,281 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.article.first {
+  position: relative;
+  background: var(--header-background-color);
+}
+
+.article.first::before {
+  content: "";
+  background: url("../../assets/images/florest-banner.webp") no-repeat;
+  background-size: cover;
+  background-position: center 90%;
+  filter: saturate(0);
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.article.third {
+  position: relative;
+  overflow: hidden;
+}
+
+.article.third::after {
+  content: "";
+  width: 450px;
+  height: 450px;
+  background: var(--background-lamp-image);
+  background-size: contain;
+  position: absolute;
+  transform: translate(35%, 25%);
+  z-index: -1;
+
+  @media (min-width: 768px) {
+    transform: translate(55%);
+  }
+
+  @media (min-width: 1024px) {
+    width: 550px;
+    height: 550px;
+    transform: translate(85%);
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 30px 0;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding: 60px 0;
+  }
+}
+
+.section.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+  padding: 10vh 0 0;
+  position: relative;
+  z-index: 1;
+
+  img {
+    min-width: 275px;
+    max-width: 35%;
+    height: auto;
+  }
+
+  p {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  button {
+    font-family: var(--tipography-title);
+    font-size: var(--text-xl);
+    line-height: var(--lineheight-xl);
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--red);
+    background: transparent;
+    border: 3px solid var(--red);
+    padding: 1rem 2rem;
+  }
+
+  button:active {
+    background: var(--red);
+    color: var(--white);
+  }
+
+  button:hover {
+    background: var(--red);
+    color: var(--white);
+  }
+}
+
+.world-characters {
+  width: 100%;
+  max-width: 90vw;
+  position: absolute;
+  z-index: -1;
+}
+
+.world-characters.top-characters {
+  height: 100%;
+  background-color: var(--character-top-image-color);
+  bottom: -3px;
+
+  mask: var(--character-top-image-src) bottom / contain no-repeat;
+  -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
+}
+
+.world-characters.bottom-characters {
+  height: 250px;
+  background-color: var(--character-bottom-image-color);
+  top: 3px;
+  transform: rotateZ(180deg) scaleX(-1);
+  position: relative;
+
+  mask: var(--character-bottom-image-src) bottom / contain no-repeat;
+  -webkit-mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
+
+  @media (min-width: 768px) {
+    height: 350px;
+  }
+
+  @media (min-width: 1024px) {
+    height: 450px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 550px;
+  }
+}
+
+.section.description {
+  justify-content: center;
+  align-items: flex-end;
+
+  div {
+    h2,
+    p {
+      text-align: left;
+    }
+  }
+
+  img {
+    width: 275px;
+  }
+
+  @media (min-width: 1024px) {
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.section.trailer {
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  div {
+    h2,
+    p {
+      text-align: right;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.section.description,
+.section.trailer {
+  @media (min-width: 768px) {
+    align-items: center;
+
+    div:nth-child(2) {
+      width: 50%;
+    }
+  }
+}
+
+.section.gallery {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    li {
+      background: var(--highlight-color);
+      width: 150px;
+      height: 150px;
+      padding: 15px;
+
+      img {
+        background: var(--highlight-color);
+        width: calc(100%);
+        height: calc(100%);
+        object-fit: cover;
+        object-position: center;
+        padding: 8px;
+        border: 2px solid var(--red);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    ul {
+      flex-direction: row;
+
+      li {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    ul {
+      flex-direction: row;
+
+      li {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+.section.form {
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+
+  h3 {
+    color: var(--highlight-color);
+    span {
+      color: var(--red);
+    }
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      width: 50%;
+    }
+  }
+}
+
+.section.form > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 3rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
