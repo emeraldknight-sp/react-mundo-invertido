@@ -118,8 +118,8 @@
   background-color: var(--character-top-image-color);
   bottom: -3px;
 
-  mask: var(--character-top-image-src) bottom / contain no-repeat;
   -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
+  mask: var(--character-top-image-src) bottom / contain no-repeat;
 }
 
 .world-characters.bottom-characters {
@@ -129,8 +129,8 @@
   transform: rotateZ(180deg) scaleX(-1);
   position: relative;
 
-  mask: var(--character-bottom-image-src) bottom / contain no-repeat;
   -webkit-mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
+  mask: var(--character-bottom-image-src) bottom / contain no-repeat;
 }
 
 @media (min-width: 768px) {
