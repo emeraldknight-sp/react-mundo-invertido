@@ -1,40 +1,15 @@
-@import "../../style/variables";
-
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
+}
 
-  h3 {
-    font-family: $tipography-title;
-    font-size: $text-3xl;
-    font-weight: 900;
-    line-height: $lineheight-3xl;
-    color: $red;
-    text-transform: uppercase;
-  }
-
-  p {
-    font-family: $tipography-content;
-    font-size: $text-md;
-    line-height: $lineheight-md;
-    color: $black;
-    font-weight: 400;
-  }
-
-  button {
-    cursor: pointer;
-  }
-
-  @media (min-width: 1024px) {
-    h3 {
-      font-family: $tipography-title;
-      font-size: $text-5xl;
-      font-weight: 900;
-      line-height: $lineheight-5xl;
-      color: $red;
-      text-transform: uppercase;
-    }
-  }
+.main::before {
+  content: "";
+  width: 100%;
+  height: calc(100% - 100vh);
+  position: absolute;
+  background: var(--page-background) no-repeat,
+    url("../../assets/images/florest-background.webp") no-repeat;
+  background-size: cover;
+  z-index: -1;
+  transform: translateY(100vh);
 }
