@@ -1,30 +1,30 @@
 .container {
-  background: var(--red);
-  max-width: 800px;
-  max-height: 250px;
-  width: 95%;
+	background: var(--red);
+	max-width: 800px;
+	max-height: 250px;
+	width: 95%;
 }
 
 .frame {
-  position: relative;
-  bottom: 14px;
-  left: 14px;
-  height: 100%;
-  width: 100%;
-  border: 2px solid;
-  border-image: linear-gradient(var(--red), var(--white));
-  border-image-slice: 10;
+	position: relative;
+	bottom: 14px;
+	left: 14px;
+	height: 100%;
+	width: 100%;
+	border: 2px solid;
+	border-image: linear-gradient(var(--red), var(--white));
+	border-image-slice: 10;
 }
 
 @media (min-width: 425px) {
-  .container {
-    width: auto;
-  }
+	.container {
+		width: auto;
+	}
 }
 
 @media (min-width: 768px) {
-  .frame {
-    bottom: 24px;
-    left: 24px;
-  }
+	.frame {
+		bottom: 24px;
+		left: 24px;
+	}
 }

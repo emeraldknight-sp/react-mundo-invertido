@@ -1,15 +1,16 @@
 .main {
-  position: relative;
+	position: relative;
 }
 
 .main::before {
-  content: "";
-  width: 100%;
-  height: calc(100% - 100vh);
-  position: absolute;
-  background: var(--page-background) no-repeat,
-    url("../../assets/images/florest-background.webp") no-repeat;
-  background-size: cover;
-  z-index: -1;
-  transform: translateY(100vh);
+	content: "";
+	width: 100%;
+	height: calc(100% - 100vh);
+	position: absolute;
+	background:
+		var(--page-background) no-repeat,
+		url("../../assets/images/florest-background.webp") no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: translateY(100vh);
 }

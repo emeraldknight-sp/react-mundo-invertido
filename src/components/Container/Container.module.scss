@@ -1,16 +1,16 @@
 .container {
-  max-width: 90vw;
-  margin: 0 auto;
+	max-width: 90vw;
+	margin: 0 auto;
 
-  @media (min-width: 768px) {
-    max-width: 80vw;
-  }
+	@media (min-width: 768px) {
+		max-width: 80vw;
+	}
 
-  @media (min-width: 1024px) {
-    max-width: 75vw;
-  }
+	@media (min-width: 1024px) {
+		max-width: 75vw;
+	}
 
-  @media (min-width: 1440px) {
-    max-width: 70vw;
-  }
+	@media (min-width: 1440px) {
+		max-width: 70vw;
+	}
 }
