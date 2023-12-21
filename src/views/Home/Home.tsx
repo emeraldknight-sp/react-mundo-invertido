@@ -11,6 +11,7 @@ import LogoStrangerThings from "../../assets/images/logo.webp";
 
 import styles from "./Home.module.scss";
 import { gallery } from "../../mock/gallery";
+import { Button } from "../../components/Button";
 
 export const Home = () => {
   const [theme, setTheme] = useState(true);
@@ -37,9 +38,12 @@ export const Home = () => {
                 todo das garras de Vecna. Você está preparado? Então clique no
                 botão abaixo para entrar no Mundo Invertido.
               </p>
-              <button type="button" onClick={switchTheme}>
+              <Button
+                ariaLabel="Click to change theme"
+                onClick={switchTheme}
+              >
                 Inverter mundos
-              </button>
+              </Button>
               <div
                 id="top-characters"
                 className={`${styles["world-characters"]} ${styles["top-characters"]}`}
@@ -135,7 +139,9 @@ export const Home = () => {
                       rows={10}
                     ></textarea>
                   </div>
-                  <button type="button">Me inscrever</button>
+                  <Button type="submit" ariaLabel="Click to submit">
+                    Me inscrever
+                  </Button>
                 </Form>
               </div>
             </section>
