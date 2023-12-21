@@ -10,6 +10,28 @@
 
   background-color: var(--footer-background-color);
   padding: 3.75rem 0;
+
+  &::before,
+  &::after {
+    content: "";
+    min-width: 250px;
+    height: 150px;
+    background: url("../../assets/images/tape.svg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -30px;
+    z-index: 9999;
+  }
+
+  &::before {
+    transform: rotateZ(-10deg);
+    left: -170px;
+  }
+
+  &::after {
+    transform: rotateZ(10deg);
+    right: -200px;
+  }
 }
 
 .footer div {
@@ -34,48 +56,30 @@
   cursor: pointer;
 }
 
-.footer::before,
-.footer::after {
-  content: "";
-  min-width: 250px;
-  height: 150px;
-  background: url("../../assets/images/tape.svg") no-repeat;
-  background-size: contain;
-  position: absolute;
-  bottom: -30px;
-  z-index: 9999;
-}
-
-.footer::before {
-  transform: rotateZ(-10deg);
-  left: -170px;
-}
-
-.footer::after {
-  transform: rotateZ(10deg);
-  right: -200px;
-}
-
 @media (min-width: 768px) {
-  .footer::before {
-    transform: rotateZ(-10deg);
-    left: -100px;
-  }
+  .footer {
+    &::before {
+      transform: rotateZ(-10deg);
+      left: -100px;
+    }
 
-  .footer::after {
-    transform: rotateZ(10deg);
-    right: -130px;
+    &::after {
+      transform: rotateZ(10deg);
+      right: -130px;
+    }
   }
 }
 
 @media (min-width: 1024px) {
-  .footer::before {
-    transform: rotateZ(-10deg);
-    left: -30px;
-  }
+  .footer {
+    &::before {
+      transform: rotateZ(-10deg);
+      left: -30px;
+    }
 
-  .footer::after {
-    transform: rotateZ(10deg);
-    right: -50px;
+    &::after {
+      transform: rotateZ(10deg);
+      right: -50px;
+    }
   }
 }

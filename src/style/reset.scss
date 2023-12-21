@@ -55,7 +55,6 @@ table {
 }
 
 * {
-  margin: 0;
   box-sizing: border-box;
   transition: 1s;
 }
@@ -82,10 +81,6 @@ h3 {
 		color: var(--red);
 		text-transform: uppercase;
 	}
-}
-
-button {
-	cursor: pointer;
 }
 
 p {
