@@ -21,7 +21,6 @@
 		"src/**/*.d.ts",
 		"src/**/*.tsx",
 		"src/**/*.scss",
-		"removeListeners.ts"
 	],
 	"exclude": ["node_modules"]
 }
