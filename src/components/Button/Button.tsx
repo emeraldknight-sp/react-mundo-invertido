@@ -1,12 +1,5 @@
+import { ButtonProps } from "../../@types";
 import style from "./Button.module.scss";
-
-interface ButtonProps {
-	children?: React.ReactNode;
-	type?: "submit" | "reset" | "button" | undefined;
-	id?: string;
-	ariaLabel: string;
-	onClick?: () => void;
-}
 
 export const Button = ({
 	id = "",

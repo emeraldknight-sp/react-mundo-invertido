@@ -1,9 +1,5 @@
+import { FrameProps } from "../../@types";
 import styles from "./Frame.module.scss";
-
-interface FrameProps {
-	id: string;
-	title: string;
-}
 
 export const Frame = ({ id, title }: FrameProps) => {
 	return (
