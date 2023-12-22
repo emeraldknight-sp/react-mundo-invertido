@@ -1,24 +1,25 @@
-import { useState } from "react";
+import { useContext } from "react";
 
-import { Footer } from "../../components/Footer";
-import { Main } from "../../components/Main";
+import { Button } from "../../components/Button";
 import { Container } from "../../components/Container";
+import { Footer } from "../../components/Footer";
 import { Form } from "../../components/Form";
 import { Frame } from "../../components/Frame";
+import { Main } from "../../components/Main";
+
+import { FormContext } from "../../context/FormContext";
+import { ThemeContext } from "../../context/ThemeContext";
 
 import InvertedWorld from "../../assets/images/inverted-world.webp";
 import LogoStrangerThings from "../../assets/images/logo.webp";
 
-import styles from "./Home.module.scss";
 import { gallery } from "../../mock/gallery";
-import { Button } from "../../components/Button";
+
+import styles from "./Home.module.scss";
 
 export const Home = () => {
-	const [theme, setTheme] = useState(true);
-
-	const switchTheme = () => {
-		setTheme(!theme);
-	};
+	const { setFormData } = useContext(FormContext);
+	const { theme, switchTheme } = useContext(ThemeContext);
 
 	return (
 		<div className={theme ? "light-theme" : "dark-theme"}>
@@ -117,23 +118,39 @@ export const Home = () => {
 								<Form>
 									<div>
 										<label htmlFor="name">Nome completo</label>
-										<input type="text" id="name" name="name" />
+										<input
+											type="text"
+											id="name"
+											name="name"
+											onChange={setFormData}
+										/>
 									</div>
 									<div>
 										<label htmlFor="email">E-mail</label>
-										<input type="email" id="email" name="email" />
+										<input
+											type="email"
+											id="email"
+											name="email"
+											onChange={setFormData}
+										/>
 									</div>
 									<div>
 										<label htmlFor="level">Nível</label>
-										<input type="number" id="level" name="level" />
+										<input
+											type="number"
+											id="level"
+											name="level"
+											onChange={setFormData}
+										/>
 									</div>
 									<div>
-										<label htmlFor="character">Personagem</label>
+										<label htmlFor="description">Personagem</label>
 										<textarea
-											id="character"
-											name="character"
+											id="description"
+											name="description"
 											cols={30}
 											rows={10}
+											onChange={setFormData}
 										></textarea>
 									</div>
 									<Button type="submit" ariaLabel="Click to submit">
@@ -145,7 +162,40 @@ export const Home = () => {
 					</Container>
 				</article>
 			</Main>
-			<Footer />
+			<Footer>
+				<p>
+					Projeto construído para fins didáticos com o objetivo de colocar em
+					prática os conhecimentos de HTML5, CSS3 e Javascript ES6 aprendidos na
+					&nbsp;
+					<a
+						href="https://www.dio.me/"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						DIO
+					</a>
+					.
+				</p>
+				<p>
+					Modificado com React utilizando&nbsp;
+					<a
+						href="https://github.com/css-modules/css-modules"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						CSS Modules
+					</a>
+					&nbsp;e&nbsp;
+					<a
+						href="https://github.com/learning-zone/sass-basics"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						SASS
+					</a>
+					.
+				</p>
+			</Footer>
 		</div>
 	);
 };
