@@ -65,10 +65,12 @@
 		color: var(--white);
 		padding: 0.5rem;
 
-		&:focus-visible {
-			outline: none;
-			border-color: var(--black);
-		}
+	}
+	
+	input:focus-visible,
+	textarea:focus-visible {
+		outline: none;
+		border-color: var(--black);
 	}
 }
 
