@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+<h1 align="center">Project: Stranger Things</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="logo" src=".github/project.webp" width="15%">
+</p>
 
-## Available Scripts
+This project revolves around crafting a dedicated website for the critically acclaimed series 'Stranger Things' on Netflix. Built with the powerful React.js framework and enhanced with polished styling using SASS and CSS Modules, the website delivers an engaging and informative journey into the mysterious world of Hawkins. The project showcases a modular architecture, refined design, and seamless navigation, providing users with an immersive experience into the supernatural tales and captivating characters of 'Stranger Things'.
 
-In the project directory, you can run:
+<p align="center">
+  <a href="#-tecnologias">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
+</p>
 
-### `yarn start`
+## 🔗 Links
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/davidalmeidadev)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://instagram.com/davidalmeidadev)
+[![Brave](https://img.shields.io/badge/Portfolio-yellow?style=for-the-badge&logo=Brave&logoColor=white)](https://react-project-portfolio.vercel.app/)
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 Tecnologies
 
-### `yarn test`
+This project was developed with the following technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- HTML5, CSS3, JS ES6+
+- [Node e Yarn](https://nodejs.org/)
+- [React.js](https://react.dev/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [Typescript](https://www.typescriptlang.org/docs/)
+- [SASS](https://sass-lang.com/documentation/)
+- [Google Firebase Firestore](https://cloud.google.com/firestore/docs?hl=pt-br)
 
-### `yarn build`
+## 💻 Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This is a single-page website project for programming beginners that has been improved to enhance technologies that have already been studied previously. The Stranger Things website has technologies such as React, SASS, CSS Modules, Google Firebase Firestore and features such as dark mode and integration with the NoSQL database to store data through a form.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In addition, there are also Typescript, Eslint, Prettier, Lint-staged and Husky as great tools to make the code cleaner, more coherent and cohesive for future maintenance that the application may have.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏡 Get started
 
-### `yarn eject`
+Installing project dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+yarn install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Application initialization
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+yarn start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Application build
 
-## Learn More
+```sh
+yarn build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔖 Layout
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You can view the project layout by clicking [here](https://dribbble.com/shots/8359316-The-Mandalorian?utm_source=pinterest&utm_campaign=pinterest_shot&utm_content=The+Mandalorian&utm_medium=Social_Share).
+
+<p align="center">
+  <img alt="layout" src=".github/layout.webp" width="70%">
+</p>
+
+## 📝 License
+
+This project is under the [MIT license](./LICENSE).
