@@ -119,28 +119,31 @@ export const Home = () => {
 									<div>
 										<label htmlFor="name">Nome completo</label>
 										<input
-											type="text"
 											id="name"
+											type="text"
 											name="name"
 											onChange={setFormData}
+											required
 										/>
 									</div>
 									<div>
 										<label htmlFor="email">E-mail</label>
 										<input
-											type="email"
 											id="email"
+											type="email"
 											name="email"
 											onChange={setFormData}
+											required
 										/>
 									</div>
 									<div>
 										<label htmlFor="level">Nível</label>
 										<input
-											type="number"
 											id="level"
+											type="number"
 											name="level"
 											onChange={setFormData}
+											required
 										/>
 									</div>
 									<div>
@@ -151,6 +154,7 @@ export const Home = () => {
 											cols={30}
 											rows={10}
 											onChange={setFormData}
+											required
 										></textarea>
 									</div>
 									<Button type="submit" ariaLabel="Click to submit">
