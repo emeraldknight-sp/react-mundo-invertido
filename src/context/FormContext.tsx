@@ -1,6 +1,8 @@
 import { ChangeEvent, FormEvent, createContext, useState } from "react";
+import toast from "react-hot-toast";
 import { FormContextProps, FormProviderProps } from "../@types";
 import { formData } from "../mock/formData";
+import { insertData } from "../api/server";
 
 export const FormContext = createContext<FormContextProps>({
 	data: formData,
@@ -20,9 +22,16 @@ export const FormProvider = ({ children }: FormProviderProps) => {
 		});
 	};
 
-	const sendFormData = (e: FormEvent<HTMLFormElement>) => {
+	const sendFormData = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		console.log("Form enviado!", data);
+
+		try {
+			const registro = await insertData(data);
+			toast.success(`Inscrição ${registro} realizada!`);
+		} catch (err) {
+			console.error("Error:", err);
+			toast.error("Verifique suas informações!");
+		}
 	};
 
 	return (
