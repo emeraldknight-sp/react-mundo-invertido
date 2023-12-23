@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Toaster } from "react-hot-toast";
 import reportWebVitals from "./reportWebVitals";
 import { AppProvider } from "./context";
 import { App } from "./App";
@@ -14,6 +15,7 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<AppProvider>
+			<Toaster position="top-center" reverseOrder={false} />
 			<App />
 		</AppProvider>
 	</React.StrictMode>,
