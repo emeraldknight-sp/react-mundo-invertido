@@ -2,7 +2,8 @@ import { ChangeEvent, FormEvent, createContext, useState } from "react";
 import toast from "react-hot-toast";
 import { FormContextProps, FormProviderProps } from "../@types";
 import { formData } from "../mock/formData";
-import { insertData } from "../api/server";
+import { addSubscription } from "../api/services/subscriptionService";
+import { emailValidationMiddleware } from "../api/middleware/emailValidationMiddleware";
 
 export const FormContext = createContext<FormContextProps>({
 	data: formData,
@@ -25,12 +26,20 @@ export const FormProvider = ({ children }: FormProviderProps) => {
 	const sendFormData = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
-		try {
-			const registro = await insertData(data);
-			toast.success(`Inscrição ${registro} realizada!`);
-		} catch (err) {
-			console.error("Error:", err);
-			toast.error("Verifique suas informações!");
+		const hasSubscription = await emailValidationMiddleware(data);
+
+		if (!hasSubscription) {
+			try {
+				const registro = await addSubscription(data);
+				toast.success(`Inscrição ${registro} realizada!`, {
+					id: "subscription added",
+				});
+			} catch (err) {
+				console.error("Error:", err);
+				toast.error("Verifique suas informações!", {
+					id: "subscription-denied",
+				});
+			}
 		}
 	};
 
