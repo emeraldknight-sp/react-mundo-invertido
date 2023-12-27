@@ -66,3 +66,8 @@ interface ContainerProps {
 interface FooterProps {
 	children: React.ReactNode;
 }
+
+interface QueryResult {
+	id: string;
+	data: DocumentData;
+}
