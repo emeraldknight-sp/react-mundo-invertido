@@ -27,10 +27,11 @@ This project was developed with the following technologies:
 - HTML5, CSS3, JS ES6+
 - [Node e Yarn](https://nodejs.org/)
 - [React.js](https://react.dev/)
-- [CSS Modules](https://github.com/css-modules/css-modules)
-- [Typescript](https://www.typescriptlang.org/docs/)
 - [SASS](https://sass-lang.com/documentation/)
-- [Google Firebase Firestore](https://cloud.google.com/firestore/docs?hl=pt-br)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [React-hot-toast](https://react-hot-toast.com/)
+- [Typescript](https://www.typescriptlang.org/docs/)
+- [Firebase](https://cloud.google.com/firestore/docs?hl=pt-br)
 
 ## 💻 Project
 
