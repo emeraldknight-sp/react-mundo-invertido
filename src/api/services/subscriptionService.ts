@@ -4,7 +4,6 @@ import {
 	Firestore,
 	Query,
 	QuerySnapshot,
-	SnapshotMetadata,
 	addDoc,
 	collection,
 	getDocs,
